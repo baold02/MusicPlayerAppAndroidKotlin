@@ -5,14 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/shuffle_btn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:drawableTop="@drawable/baseline_shuffle_24"
+                android:text="@string/shuffle_btn"
+                android:textColor="@color/black"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:drawableTop="@drawable/baseline_favorite_24"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/favorite_btn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:text="@string/favorite_btn"
+                android:textColor="@color/black"
+                android:textAllCaps="false"/>
+            <Button
+                android:drawableTop="@drawable/baseline_playlist_play_24"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/playlist_btn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:text="@string/playlist_btn"
+                android:textColor="@color/black"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_song"
+            android:layout_margin="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_playList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
